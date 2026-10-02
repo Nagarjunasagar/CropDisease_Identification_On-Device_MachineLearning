@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.22)
+project(cropdx_edge VERSION 2.0.0 LANGUAGES C CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release CACHE STRING "" FORCE)
+endif()
+
+option(CROPDX_BUILD_APP   "Build the Qt 6 / QML desktop-edge app" ON)
+option(CROPDX_BUILD_CLI   "Build the command-line classifier/benchmark" ON)
+option(CROPDX_BUILD_TESTS "Build unit tests" ON)
+
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+include(LiteRT)
+
+add_subdirectory(core)
+if(CROPDX_BUILD_CLI)
+  add_subdirectory(cli)
+endif()
+if(CROPDX_BUILD_APP)
+  add_subdirectory(app)
+endif()
+if(CROPDX_BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(tests)
+endif()

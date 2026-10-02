@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "disclaimer": "Guidance only. Confirm the diagnosis with a local agricultural extension service (in India, your nearest Krishi Vigyan Kendra) before applying any chemical, and always follow the product label.",
+  "classes": {
+    "bacterial_spot": {
+      "name": "Bacterial spot",
+      "cause": "Xanthomonas spp. (X. euvesicatoria, X. perforans, X. gardneri)",
+      "type": "Bacterial",
+      "symptoms": [
+        "Small, dark, water-soaked spots on leaves, often with a yellow halo",
+        "Spots merge and leaves turn yellow and drop",
+        "Raised, scabby spots on fruit"
+      ],
+      "management": [
+        "Use certified disease-free seed and transplants",
+        "Avoid overhead irrigation and handling plants when wet",
+        "Rotate away from tomato and pepper for 2–3 years",
+        "Copper-based sprays can slow spread; resistance is common"
+      ]
+    },
+    "early_blight": {
+      "name": "Early blight",
+      "cause": "Alternaria solani / A. linariae",
+      "type": "Fungal",
+      "symptoms": [
+        "Brown spots with concentric rings (a 'target' look) on older, lower leaves",
+        "Yellowing around the spots, then leaf drop from the bottom up",
+        "Dark, sunken lesions on stems near the soil line"
+      ],
+      "management": [
+        "Remove infected lower leaves and destroy crop debris",
+        "Mulch to stop soil splashing onto leaves",
+        "Stake and space plants for airflow; water at the base",
+        "Protectant fungicides as advised locally"
+      ]
+    },
+    "healthy": {
+      "name": "Healthy",
+      "cause": "No disease detected",
+      "type": "Healthy",
+      "symptoms": ["Uniform green colour with no spots, mottling or curling"],
+      "management": [
+        "Keep scouting weekly, checking both sides of leaves",
+        "Water at the base in the morning so foliage dries quickly",
+        "Remove weeds and old debris that can harbour pests and disease"
+      ]
+    },
+    "late_blight": {
+      "name": "Late blight",
+      "cause": "Phytophthora infestans",
+      "type": "Oomycete (water mould)",
+      "symptoms": [
+        "Large, irregular, greasy grey-green to brown patches on leaves",
+        "White fuzzy growth on the underside in humid weather",
+        "Firm brown blotches on fruit; can destroy a crop within days"
+      ],
+      "management": [
+        "Act immediately: remove and destroy infected plants (do not compost)",
+        "Avoid leaf wetness; improve spacing and airflow",
+        "Use resistant varieties and protectant fungicides as advised locally",
+        "Warn nearby growers: it spreads quickly by wind-borne spores"
+      ]
+    },
+    "leaf_mold": {
+      "name": "Leaf mould",
+      "cause": "Passalora fulva (syn. Cladosporium fulvum)",
+      "type": "Fungal",
+      "symptoms": [
+        "Pale green to yellow spots on the upper leaf surface",
+        "Olive-green to brown velvety mould on the underside",
+        "Mostly in greenhouses and humid, poorly ventilated crops"
+      ],
+      "management": [
+        "Lower humidity and increase ventilation",
+        "Prune and space plants so leaves dry quickly",
+        "Remove infected leaves; use resistant varieties"
+      ]
+    },
+    "mosaic_virus": {
+      "name": "Tomato mosaic virus",
+      "cause": "Tomato mosaic virus (ToMV), a tobamovirus",
+      "type": "Viral",
+      "symptoms": [
+        "Light and dark green mottled (mosaic) pattern on leaves",
+        "Distorted, narrow or fern-like leaves",
+        "Stunted plants and uneven fruit ripening"
+      ],
+      "management": [
+        "No cure: remove and destroy infected plants",
+        "Spread by hands and tools, so disinfect them between plants",
+        "Use certified seed and resistant varieties"
+      ]
+    },
+    "septoria_leaf_spot": {
+      "name": "Septoria leaf spot",
+      "cause": "Septoria lycopersici",
+      "type": "Fungal",
+      "symptoms": [
+        "Many small round spots with dark borders and grey-tan centres",
+        "Tiny black dots (fruiting bodies) inside the spots",
+        "Starts on lower leaves and moves upward"
+      ],
+      "management": [
+        "Remove infected lower leaves; avoid overhead watering",
+        "Mulch and rotate crops; clear debris after harvest",
+        "Protectant fungicides as advised locally"
+      ]
+    },
+    "spider_mites": {
+      "name": "Two-spotted spider mite",
+      "cause": "Tetranychus urticae",
+      "type": "Pest (mite)",
+      "symptoms": [
+        "Fine yellow or white speckling (stippling) on leaves",
+        "Bronzed, dry leaves and fine webbing on the underside",
+        "Worse in hot, dry, dusty conditions"
+      ],
+      "management": [
+        "Check leaf undersides; hose plants down to knock mites off",
+        "Protect natural predators: avoid broad-spectrum insecticides",
+        "Insecticidal soap, horticultural oil or a labelled miticide"
+      ]
+    },
+    "target_spot": {
+      "name": "Target spot",
+      "cause": "Corynespora cassiicola",
+      "type": "Fungal",
+      "symptoms": [
+        "Brown spots with light centres and faint concentric rings",
+        "Can look like early blight; also affects stems and fruit",
+        "Favoured by warm, humid conditions"
+      ],
+      "management": [
+        "Improve airflow by pruning and spacing",
+        "Remove crop debris and rotate crops",
+        "Protectant fungicides as advised locally"
+      ]
+    },
+    "yellow_leaf_curl_virus": {
+      "name": "Tomato yellow leaf curl virus",
+      "cause": "TYLCV (begomovirus), spread by the whitefly Bemisia tabaci",
+      "type": "Viral (whitefly-borne)",
+      "symptoms": [
+        "Leaves curl upward and turn yellow at the edges",
+        "Small, crumpled leaves and stunted growth",
+        "Flowers drop, so few or no fruit set"
+      ],
+      "management": [
+        "No cure: remove infected plants early",
+        "Control whiteflies with insect-proof nets, yellow sticky traps and reflective mulch",
+        "Plant resistant varieties and keep weeds down"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# Python 3.10–3.13. GPU: install the CUDA build of TensorFlow for your platform instead.
+tensorflow>=2.18,<2.22
+keras>=3.6
+ai-edge-litert>=1.2
+numpy
+pillow
+pyyaml
+scikit-learn
+matplotlib
