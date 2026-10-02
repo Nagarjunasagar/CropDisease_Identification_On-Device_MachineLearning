@@ -18,7 +18,17 @@ jobs:
       - name: Generate platform folders and sync model
         run: tool/bootstrap.sh
       - run: flutter analyze --no-fatal-infos
-      - run: flutter test --reporter github
+      - name: flutter test (failures shown as PR annotations)
+        run: |
+          status=0
+          flutter test --reporter json > test-results.jsonl || status=$?
+          jq -r 'select(.type=="testStart") | "\(.test.id)\t\(.test.name)"' test-results.jsonl > names.tsv
+          jq -r 'select(.type=="error") | "\(.testID)\t\((.error + " " + .stackTrace) | gsub("[\r\n]+"; " ") | .[0:900])"' test-results.jsonl |
+            while IFS=$'\t' read -r id msg; do
+              name=$(awk -F'\t' -v i="$id" '$1==i {print $2}' names.tsv)
+              echo "::error title=${name:-flutter test}::${msg}"
+            done
+          exit $status
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
