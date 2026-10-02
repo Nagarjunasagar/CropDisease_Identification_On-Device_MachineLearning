@@ -1,0 +1,57 @@
+name: edge
+on:
+  push:
+    paths: ["edge/**", "models/**", ".github/workflows/edge.yml"]
+  pull_request:
+    paths: ["edge/**", "models/**", ".github/workflows/edge.yml"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install Qt 6 and build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build qt6-base-dev qt6-declarative-dev qt6-multimedia-dev \
+            qml6-module-qtquick qml6-module-qtquick-controls qml6-module-qtquick-layouts \
+            qml6-module-qtquick-dialogs qml6-module-qtmultimedia qml6-module-qtquick-window \
+            qml6-module-qtqml-workerscript qml6-module-qtquick-templates qml6-module-qtcore \
+            libgl-dev fonts-inter
+      - name: Configure (fetches LiteRT v2.21 source)
+        run: |
+          set -o pipefail
+          cmake --version | head -1
+          # CMAKE_POLICY_VERSION_MINIMUM: some LiteRT third-party deps declare
+          # cmake_minimum_required < 3.5, which CMake 4.x rejects otherwise.
+          cmake -S edge -B edge/build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_POLICY_VERSION_MINIMUM=3.5 2>&1 | tee configure.log || {
+            msg=$(grep -E -A8 "CMake Error" configure.log | head -60 | sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g')
+            echo "::error title=cmake configure::${msg}"; exit 1; }
+      - name: Build
+        run: |
+          set -o pipefail
+          cmake --build edge/build --parallel 2>&1 | tee build.log || {
+            msg=$(grep -E -B2 -A6 "error:|FAILED:" build.log | head -60 | sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g')
+            echo "::error title=cmake build::${msg}"; exit 1; }
+      - name: Test (unit + Python parity)
+        run: ctest --test-dir edge/build --output-on-failure
+      - name: Benchmark
+        run: |
+          edge/build/cli/cropdx-cli --model models/crop_disease_int8.tflite --labels models/labels.txt \
+            --threads 2 --bench 100 edge/tests/data/leaf.jpg | tee bench.txt
+      - name: Headless UI screenshot
+        env: { QT_QPA_PLATFORM: offscreen }
+        run: edge/build/app/cropdx-app --image edge/tests/data/leaf.jpg --screenshot edge-ui.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: edge-linux
+          path: |
+            edge/build/app/cropdx-app
+            edge/build/cli/cropdx-cli
+            bench.txt
+            edge-ui.png

@@ -1,0 +1,1920 @@
+{
+  "2018 model": {
+    "file": "model_unquant.tflite",
+    "bytes": 2093132,
+    "latency_ms_1thread": 1.66,
+    "lab": {
+      "images": 2406,
+      "accuracy": 0.8944,
+      "accuracy_ci95": [
+        0.8815,
+        0.9061
+      ],
+      "macro_f1": 0.8591,
+      "mean_confidence": 0.9725,
+      "coverage": 0.985,
+      "accuracy_when_confident": 0.9008,
+      "per_class": {
+        "early_blight": {
+          "precision": 0.6071,
+          "recall": 0.9067,
+          "f1": 0.7273,
+          "support": 150
+        },
+        "healthy": {
+          "precision": 0.9463,
+          "recall": 0.9582,
+          "f1": 0.9522,
+          "support": 239
+        },
+        "late_blight": {
+          "precision": 0.9583,
+          "recall": 0.8846,
+          "f1": 0.92,
+          "support": 286
+        },
+        "leaf_mold": {
+          "precision": 0.7816,
+          "recall": 0.951,
+          "f1": 0.858,
+          "support": 143
+        },
+        "mosaic_virus": {
+          "precision": 0.7887,
+          "recall": 1.0,
+          "f1": 0.8819,
+          "support": 56
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.9318,
+          "recall": 0.7707,
+          "f1": 0.8436,
+          "support": 266
+        },
+        "spider_mites": {
+          "precision": 0.8511,
+          "recall": 0.8884,
+          "f1": 0.8694,
+          "support": 251
+        },
+        "target_spot": {
+          "precision": 0.9225,
+          "recall": 0.564,
+          "f1": 0.7,
+          "support": 211
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 0.9695,
+          "recall": 0.9888,
+          "f1": 0.9791,
+          "support": 804
+        }
+      },
+      "confusion": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          136,
+          0,
+          3,
+          6,
+          2,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          229,
+          0,
+          0,
+          1,
+          3,
+          2,
+          3,
+          0
+        ],
+        [
+          0,
+          14,
+          3,
+          253,
+          10,
+          1,
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          136,
+          0,
+          0,
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          56,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          31,
+          2,
+          3,
+          7,
+          4,
+          205,
+          4,
+          2,
+          8
+        ],
+        [
+          0,
+          4,
+          1,
+          0,
+          7,
+          3,
+          1,
+          223,
+          5,
+          7
+        ],
+        [
+          0,
+          35,
+          7,
+          3,
+          7,
+          2,
+          7,
+          27,
+          119,
+          4
+        ],
+        [
+          0,
+          1,
+          0,
+          2,
+          1,
+          2,
+          0,
+          3,
+          0,
+          795
+        ]
+      ]
+    },
+    "field": {
+      "images": 60,
+      "accuracy": 0.25,
+      "accuracy_ci95": [
+        0.1578,
+        0.3723
+      ],
+      "macro_f1": 0.1506,
+      "mean_confidence": 0.9215,
+      "coverage": 0.9667,
+      "accuracy_when_confident": 0.2586,
+      "per_class": {
+        "early_blight": {
+          "precision": 0.25,
+          "recall": 0.6667,
+          "f1": 0.3636,
+          "support": 9
+        },
+        "healthy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        "late_blight": {
+          "precision": 0.2143,
+          "recall": 0.6,
+          "f1": 0.3158,
+          "support": 10
+        },
+        "leaf_mold": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        "mosaic_virus": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.6,
+          "recall": 0.2727,
+          "f1": 0.375,
+          "support": 11
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        }
+      },
+      "confusion": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          4,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          5,
+          0,
+          3,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "supported_classes": 9
+  },
+  "v2 lab-only INT8": {
+    "file": "crop_disease_int8.tflite",
+    "bytes": 2746608,
+    "latency_ms_1thread": 4.51,
+    "lab": {
+      "images": 2725,
+      "accuracy": 0.9552,
+      "accuracy_ci95": [
+        0.9468,
+        0.9624
+      ],
+      "macro_f1": 0.9429,
+      "mean_confidence": 0.8376,
+      "coverage": 0.9244,
+      "accuracy_when_confident": 0.979,
+      "per_class": {
+        "bacterial_spot": {
+          "precision": 0.9706,
+          "recall": 0.931,
+          "f1": 0.9504,
+          "support": 319
+        },
+        "early_blight": {
+          "precision": 0.9291,
+          "recall": 0.8733,
+          "f1": 0.9003,
+          "support": 150
+        },
+        "healthy": {
+          "precision": 0.93,
+          "recall": 1.0,
+          "f1": 0.9637,
+          "support": 239
+        },
+        "late_blight": {
+          "precision": 0.9599,
+          "recall": 0.9196,
+          "f1": 0.9393,
+          "support": 286
+        },
+        "leaf_mold": {
+          "precision": 0.9379,
+          "recall": 0.951,
+          "f1": 0.9444,
+          "support": 143
+        },
+        "mosaic_virus": {
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333,
+          "support": 56
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.9345,
+          "recall": 0.9662,
+          "f1": 0.9501,
+          "support": 266
+        },
+        "spider_mites": {
+          "precision": 0.9744,
+          "recall": 0.9084,
+          "f1": 0.9402,
+          "support": 251
+        },
+        "target_spot": {
+          "precision": 0.875,
+          "recall": 0.9621,
+          "f1": 0.9165,
+          "support": 211
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 0.995,
+          "recall": 0.9863,
+          "f1": 0.9906,
+          "support": 804
+        }
+      },
+      "confusion": [
+        [
+          297,
+          2,
+          1,
+          5,
+          0,
+          0,
+          9,
+          0,
+          1,
+          4
+        ],
+        [
+          1,
+          131,
+          2,
+          4,
+          1,
+          1,
+          5,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          239,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          6,
+          3,
+          263,
+          5,
+          0,
+          1,
+          1,
+          4,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          136,
+          1,
+          0,
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          56,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          0,
+          0,
+          257,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          4,
+          0,
+          228,
+          13,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          3,
+          1,
+          203,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          0,
+          3,
+          0,
+          793
+        ]
+      ]
+    },
+    "field": {
+      "images": 69,
+      "accuracy": 0.2754,
+      "accuracy_ci95": [
+        0.1839,
+        0.3905
+      ],
+      "macro_f1": 0.1985,
+      "mean_confidence": 0.5696,
+      "coverage": 0.4783,
+      "accuracy_when_confident": 0.3939,
+      "per_class": {
+        "bacterial_spot": {
+          "precision": 0.3333,
+          "recall": 0.1111,
+          "f1": 0.1667,
+          "support": 9
+        },
+        "early_blight": {
+          "precision": 0.1739,
+          "recall": 0.4444,
+          "f1": 0.25,
+          "support": 9
+        },
+        "healthy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        "late_blight": {
+          "precision": 0.2333,
+          "recall": 0.7,
+          "f1": 0.35,
+          "support": 10
+        },
+        "leaf_mold": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        "mosaic_virus": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.6,
+          "recall": 0.5455,
+          "f1": 0.5714,
+          "support": 11
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 0.5,
+          "recall": 0.1667,
+          "f1": 0.25,
+          "support": 6
+        }
+      },
+      "confusion": [
+        [
+          1,
+          3,
+          0,
+          4,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          4,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          6,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          0,
+          1,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "supported_classes": 10
+  },
+  "v2 FP32": {
+    "file": "crop_disease_fp32.tflite",
+    "bytes": 8939440,
+    "latency_ms_1thread": 7.15,
+    "lab": {
+      "images": 2725,
+      "accuracy": 0.9637,
+      "accuracy_ci95": [
+        0.956,
+        0.9701
+      ],
+      "macro_f1": 0.9602,
+      "mean_confidence": 0.8684,
+      "coverage": 0.9556,
+      "accuracy_when_confident": 0.982,
+      "per_class": {
+        "bacterial_spot": {
+          "precision": 0.9614,
+          "recall": 0.9373,
+          "f1": 0.9492,
+          "support": 319
+        },
+        "early_blight": {
+          "precision": 0.9205,
+          "recall": 0.9267,
+          "f1": 0.9236,
+          "support": 150
+        },
+        "healthy": {
+          "precision": 0.9958,
+          "recall": 1.0,
+          "f1": 0.9979,
+          "support": 239
+        },
+        "late_blight": {
+          "precision": 0.9483,
+          "recall": 0.9615,
+          "f1": 0.9549,
+          "support": 286
+        },
+        "leaf_mold": {
+          "precision": 0.958,
+          "recall": 0.958,
+          "f1": 0.958,
+          "support": 143
+        },
+        "mosaic_virus": {
+          "precision": 0.9821,
+          "recall": 0.9821,
+          "f1": 0.9821,
+          "support": 56
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.9846,
+          "recall": 0.9624,
+          "f1": 0.9734,
+          "support": 266
+        },
+        "spider_mites": {
+          "precision": 0.9114,
+          "recall": 0.9841,
+          "f1": 0.9464,
+          "support": 251
+        },
+        "target_spot": {
+          "precision": 0.8961,
+          "recall": 0.981,
+          "f1": 0.9367,
+          "support": 211
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 1.0,
+          "recall": 0.9602,
+          "f1": 0.9797,
+          "support": 804
+        }
+      },
+      "confusion": [
+        [
+          299,
+          3,
+          0,
+          4,
+          0,
+          0,
+          3,
+          1,
+          9,
+          0
+        ],
+        [
+          0,
+          139,
+          0,
+          5,
+          1,
+          0,
+          1,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          239,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          1,
+          275,
+          3,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          137,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          55,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          4,
+          0,
+          0,
+          256,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          247,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          207,
+          0
+        ],
+        [
+          10,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          14,
+          1,
+          772
+        ]
+      ]
+    },
+    "field": {
+      "images": 69,
+      "accuracy": 0.5072,
+      "accuracy_ci95": [
+        0.3921,
+        0.6217
+      ],
+      "macro_f1": 0.4941,
+      "mean_confidence": 0.6062,
+      "coverage": 0.5507,
+      "accuracy_when_confident": 0.7368,
+      "per_class": {
+        "bacterial_spot": {
+          "precision": 0.2222,
+          "recall": 0.2222,
+          "f1": 0.2222,
+          "support": 9
+        },
+        "early_blight": {
+          "precision": 0.5,
+          "recall": 0.6667,
+          "f1": 0.5714,
+          "support": 9
+        },
+        "healthy": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "support": 8
+        },
+        "late_blight": {
+          "precision": 0.6667,
+          "recall": 0.6,
+          "f1": 0.6316,
+          "support": 10
+        },
+        "leaf_mold": {
+          "precision": 0.3636,
+          "recall": 0.6667,
+          "f1": 0.4706,
+          "support": 6
+        },
+        "mosaic_virus": {
+          "precision": 0.5,
+          "recall": 0.1,
+          "f1": 0.1667,
+          "support": 10
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.5714,
+          "recall": 0.7273,
+          "f1": 0.64,
+          "support": 11
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "support": 6
+        }
+      },
+      "confusion": [
+        [
+          2,
+          1,
+          0,
+          1,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          5,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "supported_classes": 10
+  },
+  "v2 FP16": {
+    "file": "crop_disease_fp16.tflite",
+    "bytes": 4535652,
+    "latency_ms_1thread": 7.05,
+    "lab": {
+      "images": 2725,
+      "accuracy": 0.9637,
+      "accuracy_ci95": [
+        0.956,
+        0.9701
+      ],
+      "macro_f1": 0.9602,
+      "mean_confidence": 0.8675,
+      "coverage": 0.9549,
+      "accuracy_when_confident": 0.9823,
+      "per_class": {
+        "bacterial_spot": {
+          "precision": 0.9614,
+          "recall": 0.9373,
+          "f1": 0.9492,
+          "support": 319
+        },
+        "early_blight": {
+          "precision": 0.9205,
+          "recall": 0.9267,
+          "f1": 0.9236,
+          "support": 150
+        },
+        "healthy": {
+          "precision": 0.9958,
+          "recall": 1.0,
+          "f1": 0.9979,
+          "support": 239
+        },
+        "late_blight": {
+          "precision": 0.9483,
+          "recall": 0.9615,
+          "f1": 0.9549,
+          "support": 286
+        },
+        "leaf_mold": {
+          "precision": 0.958,
+          "recall": 0.958,
+          "f1": 0.958,
+          "support": 143
+        },
+        "mosaic_virus": {
+          "precision": 0.9821,
+          "recall": 0.9821,
+          "f1": 0.9821,
+          "support": 56
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.9846,
+          "recall": 0.9624,
+          "f1": 0.9734,
+          "support": 266
+        },
+        "spider_mites": {
+          "precision": 0.9114,
+          "recall": 0.9841,
+          "f1": 0.9464,
+          "support": 251
+        },
+        "target_spot": {
+          "precision": 0.8961,
+          "recall": 0.981,
+          "f1": 0.9367,
+          "support": 211
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 1.0,
+          "recall": 0.9602,
+          "f1": 0.9797,
+          "support": 804
+        }
+      },
+      "confusion": [
+        [
+          299,
+          3,
+          0,
+          4,
+          0,
+          0,
+          3,
+          1,
+          9,
+          0
+        ],
+        [
+          0,
+          139,
+          0,
+          5,
+          1,
+          0,
+          1,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          239,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          1,
+          275,
+          3,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          137,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          55,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          4,
+          0,
+          0,
+          256,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          247,
+          4,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          207,
+          0
+        ],
+        [
+          10,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          14,
+          1,
+          772
+        ]
+      ]
+    },
+    "field": {
+      "images": 69,
+      "accuracy": 0.5072,
+      "accuracy_ci95": [
+        0.3921,
+        0.6217
+      ],
+      "macro_f1": 0.4941,
+      "mean_confidence": 0.6068,
+      "coverage": 0.5507,
+      "accuracy_when_confident": 0.7368,
+      "per_class": {
+        "bacterial_spot": {
+          "precision": 0.2222,
+          "recall": 0.2222,
+          "f1": 0.2222,
+          "support": 9
+        },
+        "early_blight": {
+          "precision": 0.5,
+          "recall": 0.6667,
+          "f1": 0.5714,
+          "support": 9
+        },
+        "healthy": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "support": 8
+        },
+        "late_blight": {
+          "precision": 0.6667,
+          "recall": 0.6,
+          "f1": 0.6316,
+          "support": 10
+        },
+        "leaf_mold": {
+          "precision": 0.3636,
+          "recall": 0.6667,
+          "f1": 0.4706,
+          "support": 6
+        },
+        "mosaic_virus": {
+          "precision": 0.5,
+          "recall": 0.1,
+          "f1": 0.1667,
+          "support": 10
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.5714,
+          "recall": 0.7273,
+          "f1": 0.64,
+          "support": 11
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "support": 6
+        }
+      },
+      "confusion": [
+        [
+          2,
+          1,
+          0,
+          1,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          5,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "supported_classes": 10
+  },
+  "v2 INT8": {
+    "file": "crop_disease_int8.tflite",
+    "bytes": 2746608,
+    "latency_ms_1thread": 4.48,
+    "lab": {
+      "images": 2725,
+      "accuracy": 0.9684,
+      "accuracy_ci95": [
+        0.9612,
+        0.9744
+      ],
+      "macro_f1": 0.9637,
+      "mean_confidence": 0.8741,
+      "coverage": 0.956,
+      "accuracy_when_confident": 0.9858,
+      "per_class": {
+        "bacterial_spot": {
+          "precision": 0.9778,
+          "recall": 0.9687,
+          "f1": 0.9732,
+          "support": 319
+        },
+        "early_blight": {
+          "precision": 0.9195,
+          "recall": 0.9133,
+          "f1": 0.9164,
+          "support": 150
+        },
+        "healthy": {
+          "precision": 0.9755,
+          "recall": 1.0,
+          "f1": 0.9876,
+          "support": 239
+        },
+        "late_blight": {
+          "precision": 0.9512,
+          "recall": 0.9545,
+          "f1": 0.9529,
+          "support": 286
+        },
+        "leaf_mold": {
+          "precision": 0.9716,
+          "recall": 0.958,
+          "f1": 0.9648,
+          "support": 143
+        },
+        "mosaic_virus": {
+          "precision": 0.9821,
+          "recall": 0.9821,
+          "f1": 0.9821,
+          "support": 56
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.9847,
+          "recall": 0.9662,
+          "f1": 0.9753,
+          "support": 266
+        },
+        "spider_mites": {
+          "precision": 0.9251,
+          "recall": 0.9841,
+          "f1": 0.9537,
+          "support": 251
+        },
+        "target_spot": {
+          "precision": 0.9196,
+          "recall": 0.9763,
+          "f1": 0.9471,
+          "support": 211
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 1.0,
+          "recall": 0.9689,
+          "f1": 0.9842,
+          "support": 804
+        }
+      },
+      "confusion": [
+        [
+          309,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1,
+          6,
+          0
+        ],
+        [
+          0,
+          137,
+          0,
+          6,
+          0,
+          0,
+          3,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          239,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          1,
+          273,
+          3,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          137,
+          0,
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          55,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          4,
+          0,
+          0,
+          257,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          247,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          1,
+          1,
+          206,
+          0
+        ],
+        [
+          6,
+          2,
+          0,
+          2,
+          1,
+          1,
+          0,
+          12,
+          1,
+          779
+        ]
+      ]
+    },
+    "field": {
+      "images": 69,
+      "accuracy": 0.5217,
+      "accuracy_ci95": [
+        0.4059,
+        0.6353
+      ],
+      "macro_f1": 0.5181,
+      "mean_confidence": 0.6049,
+      "coverage": 0.5942,
+      "accuracy_when_confident": 0.7317,
+      "per_class": {
+        "bacterial_spot": {
+          "precision": 0.25,
+          "recall": 0.2222,
+          "f1": 0.2353,
+          "support": 9
+        },
+        "early_blight": {
+          "precision": 0.5455,
+          "recall": 0.6667,
+          "f1": 0.6,
+          "support": 9
+        },
+        "healthy": {
+          "precision": 0.7143,
+          "recall": 0.625,
+          "f1": 0.6667,
+          "support": 8
+        },
+        "late_blight": {
+          "precision": 0.6667,
+          "recall": 0.6,
+          "f1": 0.6316,
+          "support": 10
+        },
+        "leaf_mold": {
+          "precision": 0.4444,
+          "recall": 0.6667,
+          "f1": 0.5333,
+          "support": 6
+        },
+        "mosaic_virus": {
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1": 0.2857,
+          "support": 10
+        },
+        "septoria_leaf_spot": {
+          "precision": 0.6,
+          "recall": 0.8182,
+          "f1": 0.6923,
+          "support": 11
+        },
+        "yellow_leaf_curl_virus": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "support": 6
+        }
+      },
+      "confusion": [
+        [
+          2,
+          1,
+          0,
+          1,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          6,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          3,
+          2,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "supported_classes": 10
+  }
+}

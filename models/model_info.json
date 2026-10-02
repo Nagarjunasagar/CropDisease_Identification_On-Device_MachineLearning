@@ -1,0 +1,57 @@
+{
+  "name": "crop_disease",
+  "version": "2.0.0",
+  "backbone": "mobilenet_v2",
+  "input": {
+    "shape": [
+      1,
+      224,
+      224,
+      3
+    ],
+    "dtype": "float32",
+    "layout": "NHWC, RGB",
+    "range": [
+      0,
+      255
+    ],
+    "preprocessing": "center-crop to square, anti-aliased resize to 224x224; normalisation is inside the model"
+  },
+  "output": {
+    "shape": [
+      1,
+      10
+    ],
+    "dtype": "float32",
+    "activation": "softmax"
+  },
+  "labels": [
+    "bacterial_spot",
+    "early_blight",
+    "healthy",
+    "late_blight",
+    "leaf_mold",
+    "mosaic_virus",
+    "septoria_leaf_spot",
+    "spider_mites",
+    "target_spot",
+    "yellow_leaf_curl_virus"
+  ],
+  "variants": {
+    "fp32": {
+      "file": "crop_disease_fp32.tflite",
+      "bytes": 8939440,
+      "sha256": "926f603179a8ee367e377fc3f236df7719834d913b04c1a48deb00f060fc9bf5"
+    },
+    "fp16": {
+      "file": "crop_disease_fp16.tflite",
+      "bytes": 4535652,
+      "sha256": "8d0753d8f4a391f827ba1cf1a53cf7e8ca9ce9ed265c74c8f984af21d439005e"
+    },
+    "int8": {
+      "file": "crop_disease_int8.tflite",
+      "bytes": 2746608,
+      "sha256": "4076a03c0a752cc110b87a8bf55e786e89bbdca40a45a1a8605c8a6be33fe7f1"
+    }
+  }
+}

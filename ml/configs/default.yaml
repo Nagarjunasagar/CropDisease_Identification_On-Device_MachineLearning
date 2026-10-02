@@ -1,0 +1,33 @@
+# Default training recipe. Override any key on the command line, e.g.
+#   python -m cropdx.train --config configs/default.yaml --set backbone=efficientnet_b0 head_epochs=8
+
+data_root: data/plantvillage/raw/color   # PlantVillage "color" folder
+split_dir: splits                        # train/val/test CSVs (committed for reproducibility)
+val_fraction: 0.15
+test_fraction: 0.15
+seed: 42
+
+image_size: 224
+batch_size: 32
+
+# mobilenet_v2 | mobilenet_v3_large | mobilenet_v3_small | efficientnet_b0
+backbone: mobilenet_v2
+# Optional local ImageNet weights file (.h5). Leave empty to let Keras download them.
+backbone_weights: ""
+dropout: 0.25
+label_smoothing: 0.1
+
+# Stage 1: frozen backbone, train the classification head
+head_epochs: 5
+head_lr: 1.0e-3
+# Stage 2: unfreeze the top of the backbone and fine-tune at a low LR
+finetune_epochs: 5
+finetune_lr: 1.0e-4
+finetune_unfreeze_fraction: 0.3   # top 30% of backbone layers (BatchNorm stays frozen)
+
+class_weighting: true
+output_dir: runs/latest
+# Optional field photos (PlantDoc train split, near-duplicates of its test split removed)
+field_train_root: ""             # e.g. data/plantdoc
+field_train_repeat: 4
+init_from: ""                    # continue from a saved .keras model
