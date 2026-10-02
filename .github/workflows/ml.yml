@@ -5,6 +5,10 @@ on:
   pull_request:
     paths: ["ml/**", "models/**", ".github/workflows/ml.yml"]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   contract-tests:
     runs-on: ubuntu-24.04
