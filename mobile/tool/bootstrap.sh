@@ -23,6 +23,13 @@ for g in android/app/build.gradle.kts android/app/build.gradle; do
   [ -f "$g" ] && sed -i.bak -E 's/minSdk(Version)? *=? *flutter\.minSdkVersion/minSdk = 26/' "$g" && rm -f "$g.bak"
 done
 
+# Android: some plugins (tflite_flutter) target Java 11 while Kotlin defaults to
+# JVM 17 on current toolchains; D8 handles mixed bytecode, so don't fail on it.
+props=android/gradle.properties
+if [ -f "$props" ] && ! grep -q "kotlin.jvm.target.validation.mode" "$props"; then
+  printf '\nkotlin.jvm.target.validation.mode=warning\n' >> "$props"
+fi
+
 tool/sync_models.sh "${MODEL_VARIANT:-int8}"
 flutter pub get
 echo "Done. Run: flutter run"

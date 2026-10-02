@@ -9,6 +9,10 @@ if (Test-Path $manifest) {
 foreach ($g in "android/app/build.gradle.kts", "android/app/build.gradle") {
   if (Test-Path $g) { (Get-Content $g) -replace 'minSdk(Version)? *=? *flutter\.minSdkVersion', 'minSdk = 26' | Set-Content $g }
 }
+$props = "android/gradle.properties"
+if ((Test-Path $props) -and -not (Select-String -Path $props -Pattern "kotlin.jvm.target.validation.mode" -Quiet)) {
+  Add-Content $props "`nkotlin.jvm.target.validation.mode=warning"
+}
 $variant = if ($env:MODEL_VARIANT) { $env:MODEL_VARIANT } else { "int8" }
 New-Item -ItemType Directory -Force assets/models | Out-Null
 Copy-Item "../models/crop_disease_$variant.tflite" assets/models/crop_disease.tflite -Force
