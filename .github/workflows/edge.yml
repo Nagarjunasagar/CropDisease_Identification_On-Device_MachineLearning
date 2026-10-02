@@ -22,10 +22,6 @@ jobs:
             qml6-module-qtquick-dialogs qml6-module-qtmultimedia qml6-module-qtquick-window \
             qml6-module-qtqml-workerscript qml6-module-qtquick-templates qml6-module-qtcore \
             libgl-dev fonts-inter
-      - uses: actions/cache@v4
-        with:
-          path: edge/build/_deps
-          key: litert-deps-${{ hashFiles('edge/cmake/LiteRT.cmake') }}
       - name: Configure (fetches LiteRT v2.21 source)
         run: |
           set -o pipefail
