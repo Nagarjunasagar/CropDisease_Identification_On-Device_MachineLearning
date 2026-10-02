@@ -27,9 +27,21 @@ jobs:
           path: edge/build/_deps
           key: litert-deps-${{ hashFiles('edge/cmake/LiteRT.cmake') }}
       - name: Configure (fetches LiteRT v2.21 source)
-        run: cmake -S edge -B edge/build -G Ninja -DCMAKE_BUILD_TYPE=Release
+        run: |
+          set -o pipefail
+          cmake --version | head -1
+          # CMAKE_POLICY_VERSION_MINIMUM: some LiteRT third-party deps declare
+          # cmake_minimum_required < 3.5, which CMake 4.x rejects otherwise.
+          cmake -S edge -B edge/build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_POLICY_VERSION_MINIMUM=3.5 2>&1 | tee configure.log || {
+            msg=$(grep -E -A8 "CMake Error" configure.log | head -60 | sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g')
+            echo "::error title=cmake configure::${msg}"; exit 1; }
       - name: Build
-        run: cmake --build edge/build --parallel
+        run: |
+          set -o pipefail
+          cmake --build edge/build --parallel 2>&1 | tee build.log || {
+            msg=$(grep -E -B2 -A6 "error:|FAILED:" build.log | head -60 | sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g')
+            echo "::error title=cmake build::${msg}"; exit 1; }
       - name: Test (unit + Python parity)
         run: ctest --test-dir edge/build --output-on-failure
       - name: Benchmark

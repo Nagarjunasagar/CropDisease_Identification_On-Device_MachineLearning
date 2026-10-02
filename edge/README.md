@@ -36,7 +36,8 @@ sudo apt install build-essential cmake ninja-build git \
   qml6-module-qtquick-dialogs qml6-module-qtmultimedia qml6-module-qtquick-window \
   qml6-module-qtqml-workerscript qml6-module-qtquick-templates qml6-module-qtcore
 
-cmake -S edge -B edge/build -G Ninja -DCMAKE_BUILD_TYPE=Release   # fetches LiteRT source
+cmake -S edge -B edge/build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5     # fetches LiteRT source; the flag is needed on CMake 4.x
 cmake --build edge/build
 ctest --test-dir edge/build --output-on-failure
 ```
