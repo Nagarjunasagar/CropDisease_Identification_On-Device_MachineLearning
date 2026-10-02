@@ -13,11 +13,22 @@ import 'package:image/image.dart' as img;
 /// Pure Dart and synchronous so it can run in a background isolate and be
 /// unit-tested without a device.
 Float32List preprocessBytes(Uint8List encoded, int size) {
-  final decoded = img.decodeImage(encoded);
+  return preprocessImage(_decode(encoded), size);
+}
+
+/// Decodes any supported format. Corrupt input surfaces as a FormatException
+/// (package:image can throw RangeError while probing truncated headers).
+img.Image _decode(Uint8List encoded) {
+  img.Image? decoded;
+  try {
+    decoded = img.decodeImage(encoded);
+  } on Object {
+    decoded = null;
+  }
   if (decoded == null) {
     throw const FormatException('Unsupported or corrupt image');
   }
-  return preprocessImage(decoded, size);
+  return decoded;
 }
 
 Float32List preprocessImage(img.Image source, int size) {
@@ -56,8 +67,12 @@ Float32List preprocessImage(img.Image source, int size) {
 
 /// Small square JPEG thumbnail for the history list.
 Uint8List thumbnailJpeg(Uint8List encoded, {int size = 256}) {
-  final decoded = img.decodeImage(encoded);
-  if (decoded == null) return Uint8List(0);
+  final img.Image decoded;
+  try {
+    decoded = _decode(encoded);
+  } on FormatException {
+    return Uint8List(0);
+  }
   final oriented = img.bakeOrientation(decoded);
   final side =
       oriented.width < oriented.height ? oriented.width : oriented.height;
